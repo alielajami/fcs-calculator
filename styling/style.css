@@ -7,7 +7,8 @@
 
 a {
     text-decoration: none !important;
-    color: orange;
+    text-decoration: underline;
+    color: white;
 }
 
 .logo {
@@ -20,17 +21,17 @@ img {
 }
 
 .header {
-    background-color: #D3D3D3;
+    background-color: orange;
     height: 80px;
     display: flex;
 }
 
 .header h1 {
-    color: orange;
+    color: white;
 }
 
 .footer {
-    background-color: #D3D3D3;
+    background-color: orange;
     position: fixed;
     bottom: 0;
     width: 100%;

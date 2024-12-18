@@ -13,8 +13,10 @@
             <h1 class="title">Prefix Postfix Calculator</h1>
         </header>
     </div>
-    <hr>
-    <div class="prefix">
+    <div class="toggle-container">
+        <button id="toggleBtn">Switch to Postfix</button>
+    </div>
+    <div class="prefix" id="prefixSection">
         <h1 class="title">Prefix Expression Calculator</h1>
             <br>
         <h3 class="def">Definition:</h3>
@@ -29,8 +31,7 @@
             <input type="text" disabled>
         </div>
     </div>
-    <hr>
-    <div class="postfix">
+    <div class="postfix hidden" id="postfixSection">
         <h1 class="title">Postfix Expression Calculator</h1>
             <br>
         <h3 class="def">Definition:</h3>
@@ -44,15 +45,16 @@
             <br>
             <input type="text" disabled>
         </div>
-        <div class="footer">
-            <footer>
-                <a href="https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html#:~:text=Prefix%20expression%20notation%20requires%20that,%2B%20A%20*%20B%20C%20in%20prefix.">More info about Prefix & Postfix expressions!</a>
-                <br>
-                <a href="mailto:alielajami20@gmail.com">Contact Us By E-mail!</a>
-                <br>
-                <p>Ali El Ajami&#169;2024</p>
-            </footer>
-        </div>
     </div>
+    <div class="footer">
+        <footer>
+            <a href="https://panda.ime.usp.br/panda/static/pythonds_pt/02-EDBasicos/InfixPrefixandPostfixExpressions.html#:~:text=Prefix%20expression%20notation%20requires%20that,%2B%20A%20*%20B%20C%20in%20prefix." target="_blank">More info about Prefix & Postfix expressions!</a>
+            <br>
+            <a href="mailto:alielajami20@gmail.com" target="_blank">Contact Us By E-mail!</a>
+            <br>
+            <p>Ali El Ajami&#169;2024</p>
+        </footer>
+    </div>
+    <script src="script/script.js"></script>
 </body>
 </html>

@@ -60,6 +60,10 @@ body {
     min-width: 200px;
 }
 
+#toggleBtn:hover {
+    background-color: var(--primary-color);
+}
+
 .toggle-container {
     text-align: center;
     padding: 16px;
@@ -107,6 +111,73 @@ input[type="text"]:disabled {
     cursor: not-allowed;
 }
 
+.mini-calculator {
+    width: 100%;
+    max-width: 300px;
+    margin: 16px 0;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.calc-btn {
+    padding: 12px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.calc-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.calc-btn.operator {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+}
+
+.calc-btn.operator:hover {
+    background-color: #2980b9;
+}
+
+.calc-btn.backspace {
+    background-color: #e74c3c;
+}
+
+.calc-btn.backspace:hover {
+    background-color: #c0392b;
+}
+
+.calc-btn.space {
+    grid-column: span 2;
+    background-color: var(--secondary-color);
+}
+
+.calc-btn.space:hover {
+    background-color: #d8d8d8;
+}
+
+.result-container {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#prefixResult {
+    background-color: var(--light-bg);
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 button {
     padding: 13px 24px;
     background-color: var(--accent-color);
@@ -125,6 +196,14 @@ hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 32px 0;
+}
+
+.preex {
+    text-align: center;
+}
+
+.postex {
+    text-align: center;
 }
 
 .footer {

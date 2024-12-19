@@ -24,11 +24,46 @@
         <br>
         <div class="precalc">
             <h4>Prefix Expression: </h4>
-            <input type="text">
-            <button>Calculate</button>
-            <button>Clear</button>
+            <input type="text" id="prefixInput" disabled>
+            <div class="mini-calculator">
+                <div class="calc-grid">
+                    <button class="calc-btn operator">+</button>
+                    <button class="calc-btn operator">-</button>
+                    <button class="calc-btn operator">*</button>
+                    <button class="calc-btn operator">/</button>
+                    <button class="calc-btn">9</button>
+                    <button class="calc-btn">8</button>
+                    <button class="calc-btn">7</button>
+                    <button class="calc-btn">6</button>
+                    <button class="calc-btn">5</button>
+                    <button class="calc-btn">4</button>
+                    <button class="calc-btn">3</button>
+                    <button class="calc-btn">2</button>
+                    <button class="calc-btn">1</button>
+                    <button class="calc-btn">0</button>
+                    <button class="calc-btn">.</button>
+                    <button class="calc-btn operator backspace">⌫</button>
+                    <button class="calc-btn space">Space</button>
+                </div>
+            </div>
+            <button class="calculate-btn">Calculate</button>
+            <button class="clear-btn">Clear</button>
             <br>
-            <input type="text" disabled>
+            <div class="result-container">
+                <h4>Result: </h4>
+                <input type="text" id="prefixResult" disabled>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="preex">
+            <h1>Prefix Example:</h3>
+            <h3>Expression: + 9 * 2 3</h3>
+            <h3>Steps:</h3>
+            <h3>1. Start from the rightmost operand: 9 and * 2 3.</h3>
+            <h3>2. Evaluate * 2 3 → 2 * 3 = 6.</h3>
+            <h3>3. Add 9 + 6 = 15.</h3>
+            <h3>Result: 15</h3>
         </div>
     </div>
     <div class="postfix hidden" id="postfixSection">
@@ -39,11 +74,45 @@
         <br>
         <div class="postcalc">
             <h4>Postfix Expression: </h4>
-            <input type="text">
-            <button>Calculate</button>
-            <button>Clear</button>
+            <input type="text" id="postfixInput" disabled><div class="mini-calculator">
+                <div class="calc-grid">
+                    <button class="calc-btn operator">+</button>
+                    <button class="calc-btn operator">-</button>
+                    <button class="calc-btn operator">*</button>
+                    <button class="calc-btn operator">/</button>
+                    <button class="calc-btn">9</button>
+                    <button class="calc-btn">8</button>
+                    <button class="calc-btn">7</button>
+                    <button class="calc-btn">6</button>
+                    <button class="calc-btn">5</button>
+                    <button class="calc-btn">4</button>
+                    <button class="calc-btn">3</button>
+                    <button class="calc-btn">2</button>
+                    <button class="calc-btn">1</button>
+                    <button class="calc-btn">0</button>
+                    <button class="calc-btn">.</button>
+                    <button class="calc-btn operator backspace">⌫</button>
+                    <button class="calc-btn space">Space</button>
+                </div>
+            </div>
+            <button class="calculate-btn">Calculate</button>
+            <button class="clear-btn">Clear</button>
             <br>
-            <input type="text" disabled>
+            <br>
+            <div class="result-container">
+                <h4>Result: </h4>
+                <input type="text" id="postfixResult" disabled>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div class="postex">
+            <h1>Postfix Example:</h3>
+            <h3>Expression: 9 2 3 * +</h3>
+            <h3>Steps:</h3>
+            <h3>1. Start with the first operator *: 2 * 3 = 6.</h3>
+            <h3>2. Add 9 + 6 = 15.</h3>
+            <h3>Result: 15</h3>
         </div>
     </div>
     <div class="footer">

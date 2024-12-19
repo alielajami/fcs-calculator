@@ -3,6 +3,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('toggleBtn');
     const prefixSection = document.getElementById('prefixSection');
     const postfixSection = document.getElementById('postfixSection');
+    const themeToggle = document.getElementById('themeToggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Load saved theme or use system preference
+    const currentTheme = localStorage.getItem('theme') || 
+    (prefersDarkScheme.matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' 
+        ? 'light' 
+        : 'dark';
+
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    });
 
     toggleBtn.addEventListener('click', () => {
         prefixSection.classList.toggle('hidden');
